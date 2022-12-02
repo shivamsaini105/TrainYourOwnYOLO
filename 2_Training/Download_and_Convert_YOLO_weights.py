@@ -36,15 +36,15 @@ if __name__ == "__main__":
         weights_file = "yolov3.weights"
         h5_file = "yolo.h5"
         cfg_file = "yolov3.cfg"
-        # Original URL: https://pjreddie.com/media/files/yolov3.weights
-        gdrive_id = "1ENKguLZbkgvM8unU3Hq1BoFzoLeGWvE_"
+        Original_URL = "https://pjreddie.com/media/files/yolov3.weights"
+#         gdrive_id = "1ENKguLZbkgvM8unU3Hq1BoFzoLeGWvE_"
 
     else:
         weights_file = "yolov3-tiny.weights"
         h5_file = "yolo-tiny.h5"
         cfg_file = "yolov3-tiny.cfg"
-        # Original URL: https://pjreddie.com/media/files/yolov3-tiny.weights
-        gdrive_id = "1mIEZthXBcEguMvuVAHKLXQX3mA1oZUuC"
+        Original_URL = "https://pjreddie.com/media/files/yolov3-tiny.weights"
+#         gdrive_id = "1mIEZthXBcEguMvuVAHKLXQX3mA1oZUuC"
 
     if not os.path.isfile(os.path.join(download_folder, weights_file)):
         print(f"\nDownloading Raw {weights_file}\n")
@@ -57,7 +57,7 @@ if __name__ == "__main__":
                 download_folder,
                 "\n",
                 "gdown",
-                f"https://drive.google.com/uc?id={gdrive_id}",
+                f"{Original_URL}",
             ]
         )
 
